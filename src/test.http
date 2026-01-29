@@ -3,10 +3,13 @@ Content-Type: application/json
 
 {
 "type": "Mercado",
-"value": 3000
+"value": 4
 }
 
 ###
 
 GET http://localhost:3000/db
 
+###
+
+GET http://localhost:3000/incomes

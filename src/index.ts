@@ -1,6 +1,5 @@
+import pool from "./dbconnection";
 import express from 'express'
-import { db } from './db'
-// import { db } from './db.js'
 
 const app = express()
 
@@ -9,19 +8,25 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.json({ status: 'ok' })
 })
-
 app.listen(3000, () => {
   console.log('API rodando na porta 3000')
 })
 
-app.post('/movements', (req, res) => {
-  // const move = {type: , value:}
-  db.movements.push(req.body) 
-  res.json({ status: 'ok' })
-  console.log(req.body)
-  console.log(db.movements)
-})
+//Database connection
+async function main() {
+  const result = await pool.query("SELECT NOW()");
+  console.log("DB connected at:", result.rows[0]);
+}
+main();
 
-app.get('/db', (req, res) => {
-  res.json(db)
-      })
+
+app.get("/incomes", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM transaction_types");
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
+
