@@ -1,0 +1,38 @@
+{
+  "name": "financial-control",
+  "version": "1.0.0",
+  "description": "financial-control is a repository dedicated to managing, tracking, and analyzing financial data. It provides tools and structures for recording incomes and expenses, monitoring budgets, generating financial reports, and supporting decision-making with clear, organized financial insights.",
+  "keywords": [],
+  "homepage": "https://github.com/SukiDaiB/financial-control#readme",
+  "bugs": {
+    "url": "https://github.com/SukiDaiB/financial-control/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukiDaiB/financial-control.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node ./src/index.ts",
+    "cu": "tsc --init"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "prettier": "^3.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true
+  }
+}

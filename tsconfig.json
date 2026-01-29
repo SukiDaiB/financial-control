@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"target": "ESNext",
+		"outDir": "dist",
+		"noEmit": false,
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"rootDir": "src",
+		"strict": true
+	},
+	"exclude": [
+		"node_modules",
+		"*/node_modules/"
+	]
+}
