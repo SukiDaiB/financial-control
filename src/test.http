@@ -12,4 +12,13 @@ GET http://localhost:3000/db
 
 ###
 
-GET http://localhost:3000/incomes
+GET http://localhost:3000/transaction_types
+
+###
+
+GET http://localhost:3000/get_expense
+
+###
+
+POST http://localhost:3000/post_categories"
+
